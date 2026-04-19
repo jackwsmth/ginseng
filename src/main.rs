@@ -16,7 +16,7 @@ struct Token {
 }
 
 fn main() {
-    let tokens = tokenize("(1 + 2)");
+    let tokens = tokenize("42 + 123");
     println!("{:?}", tokens);
 }
 
