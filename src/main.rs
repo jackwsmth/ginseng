@@ -6,7 +6,7 @@ enum TokenType {
     MUL,
     DIV,
     LPAREN,
-    RPAREN
+    RPAREN,
 }
 
 #[derive(Debug)]
