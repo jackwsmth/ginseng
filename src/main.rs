@@ -1,3 +1,4 @@
+#[derive(Debug)]
 enum TokenType {
     INT,
     ADD,
@@ -8,6 +9,7 @@ enum TokenType {
     RPAREN
 }
 
+#[derive(Debug)]
 struct Token {
     token_type: TokenType,
     token_value: String,
