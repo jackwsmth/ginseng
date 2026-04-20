@@ -23,7 +23,8 @@ fn tokenize(expr: &str) -> Vec<Token> {
             current_number.push(c);
         } else {
             if !current_number.is_empty() {
-                tokens.push(build_token(TokenType::INT, current_number.clone()));
+                let number = current_number.parse::<u128>().unwrap();
+                tokens.push(Token::Int(number));
                 current_number.clear();
             }
         }
@@ -41,7 +42,8 @@ fn tokenize(expr: &str) -> Vec<Token> {
     }
 
     if !current_number.is_empty() {
-        tokens.push(build_token(TokenType::INT, current_number));
+        let number = current_number.parse::<u128>().unwrap();
+        tokens.push(Token::Int(number));
     }
 
     tokens
