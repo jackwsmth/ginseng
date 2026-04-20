@@ -30,12 +30,12 @@ fn tokenize(expr: &str) -> Vec<Token> {
 
         match c {
             ' ' => continue,
-            '(' => tokens.push(build_token(TokenType::LPAREN, String::from("("))),
-            ')' => tokens.push(build_token(TokenType::RPAREN, String::from(")"))),
-            '+' => tokens.push(build_token(TokenType::ADD, String::from("+"))),
-            '-' => tokens.push(build_token(TokenType::SUB, String::from("-"))),
-            '*' => tokens.push(build_token(TokenType::MUL, String::from("*"))),
-            '/' => tokens.push(build_token(TokenType::DIV, String::from("/"))),
+            '(' => tokens.push(Token::LPAREN),
+            ')' => tokens.push(Token::RPAREN),
+            '+' => tokens.push(Token::ADD),
+            '-' => tokens.push(Token::SUB),
+            '*' => tokens.push(Token::MUL),
+            '/' => tokens.push(Token::DIV),
             _ => continue,
         }
     }
