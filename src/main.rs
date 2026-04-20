@@ -1,18 +1,12 @@
 #[derive(Debug)]
-enum TokenType {
-    INT,
+enum Token {
+    Int(u128),
     ADD,
     SUB,
     MUL,
     DIV,
     LPAREN,
     RPAREN,
-}
-
-#[derive(Debug)]
-struct Token {
-    token_type: TokenType,
-    token_value: String,
 }
 
 fn main() {
