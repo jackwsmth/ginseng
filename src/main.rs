@@ -46,10 +46,3 @@ fn tokenize(expr: &str) -> Vec<Token> {
 
     tokens
 }
-
-fn build_token(token_type: TokenType, token_value: String) -> Token {
-    Token {
-        token_type,
-        token_value,
-    }
-}
